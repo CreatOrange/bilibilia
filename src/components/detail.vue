@@ -11,9 +11,9 @@
 	      </div>
 	      <div>
 	        <i class="iconfont icon-bofangqi-danmudibukai"></i>
-	        <span>32.8万</span>
+	        <span>{{Math.floor(item.play/1000)/10+'万'}}</span>
 	        <i class="iconfont icon-bofangqi-danmugundongkai"></i>
-	        <span>4.3万</span>
+	        <span>{{item.video_review}}</span>
 	      </div>
 	      <div>{{item.title}}</div>
 	    </div>
@@ -36,6 +36,7 @@ export default {
   ],
   mounted(){
   	this.$store.dispatch('action_count',this.index);
+
   },
   computed : {
   	...mapState(['audiolist'])

@@ -14,9 +14,8 @@ var store = new vuex.Store({
 				
 				for(var i = 0; i<4;i++){
 					arr.push(res.data.data[i])
-					// arr[i] = 1
 				}
-				
+				console.log(arr)
 			},(err)=>{});
 			context.commit('CHANGE_AUDIOLIST',arr);
 		}
